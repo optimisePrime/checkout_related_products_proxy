@@ -10,6 +10,6 @@ export default function() {
   const id = Math.floor(Math.random() * 1000000) + 1;
 
   http.delete(
-    `http://ec2-3-16-24-103.us-east-2.compute.amazonaws.com/cart/${id}/`,
+    `http://ec2-52-15-218-131.us-east-2.compute.amazonaws.com:5000/${id}/`,
   );
 }
