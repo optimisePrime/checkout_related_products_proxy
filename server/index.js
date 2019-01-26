@@ -1,10 +1,11 @@
 const Express = require('express');
 const Path = require('path');
 const httpReq = require('axios');
-const Port = 5000;
+const port = process.env.PORT || 5000;
+
 const app = Express();
 
-app.use('/:productId', Express.static(Path.join(__dirname, 'public')));
+app.use('/:productId', Express.static(Path.join(__dirname, '../public')));
 
 //review
 app.get('/reviews/all/:productid', (req, res) => {
@@ -78,8 +79,8 @@ app.get('/photos/:productId', function(req, res) {
     });
 });
 
-app.listen(Port, () => {
-  console.log('listening on port ' + Port);
+app.listen(port, () => {
+  console.log('listening on port ' + port);
 });
 
 /*
