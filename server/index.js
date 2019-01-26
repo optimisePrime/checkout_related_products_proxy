@@ -1,3 +1,5 @@
+require('newrelic');
+
 const Express = require('express');
 const Path = require('path');
 const httpReq = require('axios');
